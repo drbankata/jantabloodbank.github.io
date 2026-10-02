@@ -1,0 +1,32 @@
+# Allowlist: ignore everything, then publish only the site's own files.
+# The repo is PUBLIC. To publish a new file or folder, add a "!/name" line here on purpose.
+/*
+!/.gitignore
+!/.nojekyll
+!/README.md
+!/index.html
+!/404.html
+!/robots.txt
+!/sitemap.xml
+!/assets/
+!/services/
+!/blood-centre/
+!/doctors/
+!/contact/
+
+# Custom domain: un-comment ONLY on DNS switch day (see NOTES.md "Going live").
+# !/CNAME
+
+# Never publish, even inside allowed folders
+**/NOTES.md
+**/CLAUDE.md
+**/PLAN.md
+**/TODO*.md
+**/.env*
+**/*.docx
+**/*.psd
+**/*.ai
+**/Thumbs.db
+**/.DS_Store
+**/desktop.ini
+**/__pycache__/

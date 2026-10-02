@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://drbankata.github.io/jantabloodbank.github.io/sitemap.xml
