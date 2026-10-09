@@ -187,7 +187,7 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 .sec-more { margin: 28px 0 0; }
 
 /* service cards */
-.svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.svc-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .svc { position: relative; display: flex; flex-direction: column; gap: 4px; padding: 14px; border-radius: var(--radius);
   background: #fff; border: 1px solid var(--line); text-decoration: none; color: var(--text);
   transition: border-color .2s, box-shadow .2s, transform .2s; }
@@ -475,3 +475,6 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   .topbar, .site-header, .float-wa, .to-top, .cta-band, .map { display: none !important; }
 }
 .svc-detail[data-g="blood"] { grid-column: 1 / -1; }
+/* narrow-screen safety: one-column grids must shrink to the screen, not widen to the longest item (see Bankata AI CLAUDE.md rule 12) */
+.svc { min-width: 0; }
+.svc-name, .svc-short, .svc-time { overflow-wrap: anywhere; }
