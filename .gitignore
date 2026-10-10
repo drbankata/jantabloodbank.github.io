@@ -15,7 +15,7 @@
 !/contact/
 
 # Custom domain: un-comment ONLY on DNS switch day (see NOTES.md "Going live").
-# !/CNAME
+!/CNAME
 
 # Never publish, even inside allowed folders
 **/NOTES.md

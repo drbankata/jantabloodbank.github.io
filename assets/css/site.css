@@ -399,6 +399,16 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 /* 404 */
 .nf { min-height: 50vh; display: flex; align-items: center; }
 
+/* Small-screen safety (2026-10-10): grid/flex children may shrink, tracks never grow past the screen, long text wraps.
+   Sits before the min-width media queries, which still set the wider layouts. */
+:where(div, article, section, figure, picture, li, form, label, a, p, h1, h2, h3, ul) { min-width: 0; }
+:where(h1, h2, h3, p, li, a, label, .brand-name, .brand-sub) { overflow-wrap: anywhere; }
+.hero-in, .doc-grid, .doc-card, .bb-in, .visit, .cta-in, .foot, .sd-grid, .bc-hero-in, .feat-grid, .donate, .steps,
+.form, .row2, .prof, .contact-cards, .faqs, .contact-mini, .bb-points, .foot-list, .status { grid-template-columns: minmax(0, 1fr); }
+.status li { grid-template-columns: minmax(0, 1fr) auto; }
+.facts-in, .gallery, .bc-photos, .prof-gal { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.btn { white-space: normal; text-align: center; max-width: 100%; }
+
 /* ---------- 640 */
 @media (min-width: 640px) {
   :root { --gut: 28px; }
@@ -496,3 +506,6 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 @media (prefers-reduced-motion: reduce) { .made-by .mb-name, .made-by .mb-arrow { transition: none; } }
 .made-by { --mb-line: rgba(255,255,255,.1); --mb-text: rgba(255,255,255,.9); --mb-muted: rgba(255,255,255,.55); --mb-accent: var(--sky); --mb-rest: rgba(60,180,230,.5); --mb-pre-font: var(--serif); --mb-pre-style: italic; --mb-pre-size: 1.2rem; --mb-name-font: var(--sans); --mb-name-weight: 600; --mb-name-color: #fff; --mb-sub-font: var(--sans); }
 .made-by .mb-main::before { content: ""; width: 9px; height: 9px; border-radius: 0 50% 50% 50%; transform: rotate(45deg); background: var(--sky); align-self: center; margin-right: .35em; }
+.rules th, .rules td { overflow-wrap: anywhere; }
+.prof-facts { flex-wrap: wrap; }
+.prof-facts b, .prof-facts span { overflow-wrap: anywhere; }
