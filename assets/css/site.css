@@ -481,7 +481,7 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 
 /* ---------- Designer credit ("Designed by", footer) ---------- */
 .made-by { margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--mb-line); display: flex; justify-content: center; text-align: center; min-width: 0; }
-.made-by .mb { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; min-height: 44px; justify-content: center; max-width: 100%; color: var(--mb-text); text-decoration: none; overflow-wrap: anywhere; }
+.made-by .mb { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; min-height: 44px; justify-content: center; max-width: 100%; color: var(--mb-text); text-decoration: none; overflow-wrap: anywhere; position: relative; }
 .made-by .mb:hover { text-decoration: none; color: var(--mb-text); }
 .made-by .mb-main { display: inline-flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 0 .4em; min-width: 0; }
 .made-by .mb-pre { font-family: var(--mb-pre-font); font-style: var(--mb-pre-style, normal); font-size: var(--mb-pre-size, 1.1rem); color: var(--mb-muted); letter-spacing: var(--mb-pre-ls, 0); text-transform: var(--mb-pre-tt, none); }
@@ -489,6 +489,7 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 .made-by .mb-cred { font-family: var(--mb-cred-font, var(--mb-name-font)); font-size: .86rem; color: var(--mb-muted); }
 .made-by .mb-arrow { font-family: system-ui, "Segoe UI Symbol", sans-serif; color: var(--mb-accent); display: inline-block; transition: transform .25s ease; font-size: .95em; }
 .made-by .mb-sub { font-family: var(--mb-sub-font); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--mb-muted); opacity: .85; }
+.made-by .mb-sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .made-by .mb:hover .mb-name, .made-by .mb:focus-visible .mb-name { background-size: 100% 2px; }
 .made-by .mb:hover .mb-arrow, .made-by .mb:focus-visible .mb-arrow { transform: translate(3px, -3px); }
 .made-by .mb:focus-visible { outline: 2px solid var(--mb-accent); outline-offset: 4px; border-radius: 4px; }
